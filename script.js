@@ -84,41 +84,86 @@ function exibirTodos() {
 // Modal
 
 catalogo = [
-  { nome: "Fratura", ano: "2019", plataformas: "Netflix" },
-  { nome: "Fuja", ano: "2020", plataformas: "Netflix" },
+  // Filmes de Suspense
+
+  { nome: "Fratura", ano: "2019", plataformas: "Netflix", duracao: "1h 40min" },
+  { nome: "Fuja", ano: "2020", plataformas: "Netflix", duracao: "1h 30min" },
   {
     nome: "Corra",
     ano: "2017",
-    plataformas: "Amazon Prime, Disney+ e Netflix",
+    plataformas: "Disney+, Netflix e Prime Video",
+    duracao: "1h 44min",
   },
   {
     nome: "O Homem nas Trevas 2",
     ano: "2021",
-    plataformas: "Amazon Prime e Netflix",
+    plataformas: "Netflix e Prime Video",
+    duracao: "1h 38min",
   },
-  { nome: "A Sociedade da Neve", ano: "2023", plataformas: "Netflix" },
-  { nome: "Bird Box", ano: "2018", plataformas: "Netflix" },
-  { nome: "Destinos a Deriva", ano: "2023", plataformas: "Netflix" },
-  { nome: "O Poço", ano: "2019", plataformas: "Netflix" },
+  {
+    nome: "A Sociedade da Neve",
+    ano: "2023",
+    plataformas: "Netflix",
+    duracao: "2h 24min",
+  },
+  { nome: "Bird Box", ano: "2018", plataformas: "Netflix", duracao: "2h 4min" },
+  {
+    nome: "Destinos a Deriva",
+    ano: "2023",
+    plataformas: "Netflix",
+    duracao: "1h 49min",
+  },
+  {
+    nome: "A Queda",
+    ano: "2022",
+    plataformas: "Prime Video",
+    duracao: "1h 47min",
+  },
+  {
+    nome: "O Enfermeiro da Noite",
+    ano: "2022",
+    plataformas: "Netflix",
+    duracao: "2h",
+  },
+  {
+    nome: "Nós",
+    ano: "2019",
+    plataformas: "Prime Video",
+    duracao: "2h",
+  },
 
-  { nome: "Mama", ano: "2013", plataformas: "Amazon Prime e Netflix" },
-  { nome: "A Bruxa", ano: "2015", plataformas: "Amazon Prime e Netflix" },
+  // Filmes de Terror
+
+  { nome: "O Poço", ano: "2019", plataformas: "Netflix", duracao: "1h 34min" },
+
+  {
+    nome: "Mama",
+    ano: "2013",
+    plataformas: "Netflix e Prime Video",
+    duracao: "1h 40min",
+  },
+  {
+    nome: "A Bruxa",
+    ano: "2015",
+    plataformas: "Netflix e Prime Video",
+    duracao: "1h 32min",
+  },
   {
     nome: "Boneco do Mal",
     ano: "2016",
-    plataformas: "Amazon Prime e Netflix",
-    duracao: "01h37m",
+    plataformas: "Netflix e Prime Video",
+    duracao: "1h 37min",
   },
   {
     nome: "Hereditário",
     ano: "2019",
-    plataformas: "Amazon Prime, Max e Netflix",
-    duracao: "2h07m",
+    plataformas: "Max, Netflix e Prime Video",
+    duracao: "2h 7min",
   },
   {
     nome: "Midsommar",
     ano: "2019",
-    plataformas: "Amazon Prime",
+    plataformas: "Prime Video",
     duracao: "2h 28m",
   },
   {
@@ -132,6 +177,30 @@ catalogo = [
     ano: "2023",
     plataformas: "Netflix",
     duracao: "1h 40min",
+  },
+  {
+    nome: "Convite Maldito",
+    ano: "2022",
+    plataformas: "Prime Video",
+    duracao: "1h 44min",
+  },
+  {
+    nome: "Invocação do Mal 3",
+    ano: "2021",
+    plataformas: "Max e Prime Video",
+    duracao: "1h 52min",
+  },
+  {
+    nome: "Morte Morte Morte",
+    ano: "2022",
+    plataformas: "Prime Video",
+    duracao: "1h 35min",
+  },
+  {
+    nome: "O Telefone Preto",
+    ano: "2021",
+    plataformas: "Prime Video",
+    duracao: "1h 42min",
   },
 ];
 
@@ -170,5 +239,6 @@ function exibirModal(filme) {
   closeButton.addEventListener("click", () => {
     modal.close();
     container.style.opacity = "100%";
+    return modalAberto;
   });
 }
