@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <title>Movie Hall</title>
+  </head>
+  <body onload="carregar(), exibirSuspense()">
+    <div class="loading">
+      <div class="spin"></div>
+      <p>Carregando</p>
+    </div>
+
+    <div class="container">
+      <header>
+        <p class="logo">🦄<span class="brand-gradient">Movie Hall</span></p>
+      </header>
+      <div class="hero">
+        <h1 class="hero__headline">
+          Para de rolar a tela...
+          <span class="brand-gradient">achei seu filme</span>
+        </h1>
+        <p class="hero__text">
+          O Movie Hall é uma plataforma pra você ficar sabendo dos melhores
+          filmes de cada categoria. Nosso processo é totalmente humanizado e, em
+          modéstia parte, baseado em escolhas de muito bom gosto.
+        </p>
+      </div>
+
+      <div class="productions">
+        <img
+          class="productions__image"
+          src="assets/productions/universal.png"
+          alt="amazon"
+        />
+        <img
+          class="productions__image"
+          src="assets/productions/warner.png"
+          alt="amazon"
+        />
+        <img
+          class="productions__image"
+          src="assets/productions/amazon.png"
+          alt="amazon"
+        />
+        <img
+          class="productions__image"
+          src="assets/productions/columbia.png"
+          alt="amazon"
+        />
+        <img
+          class="productions__image"
+          src="assets/productions/disney.png"
+          alt="amazon"
+        />
+        <img
+          class="productions__image"
+          src="assets/productions/netflix.png"
+          alt="amazon"
+        />
+        <img
+          class="productions__image"
+          src="assets/productions/paramount.png"
+          alt="amazon"
+        />
+        <img
+          class="productions__image"
+          src="assets/productions/fox.png"
+          alt="amazon"
+        />
+      </div>
+
+      <div class="categories">
+        <h2 class="categories__title">Categorias</h2>
+
+        <div id="myBtnContainer">
+          <button class="btn btnSuspense active" onclick="exibirSuspense()">
+            Suspense
+          </button>
+          <button class="btn btnTerror" onclick="exibirTerror()">Terror</button>
+          <button class="btn btnTodos" onclick="exibirTodos()">Todos</button>
+        </div>
+
+        <div class="categories__elements" onload="exibirSuspense()">
+          <img
+            src="assets/movies/suspense/fratura.jpg"
+            alt="Fratura"
+            title="Fratura"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/suspense/fuja.jpg"
+            alt="Fuja"
+            title="Fuja"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/suspense/corra.jpg"
+            alt="Corra"
+            title="Corra"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/suspense/o-homem-nas-trevas-2.jpg"
+            alt="O Homem nas Trevas 2"
+            title="O Homem nas Trevas 2"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/suspense/a-sociedade-da-neve.jpg"
+            alt="A Sociedade da Neve"
+            title="A Sociedade da Neve"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/suspense/bird-box.jpg"
+            alt="Bird Box"
+            title="Bird Box"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/suspense/destinos-a-deriva.jpg"
+            alt="Destinos a Deriva"
+            title="Destinos a Deriva"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/suspense/o-poco.jpg"
+            alt="O Poço"
+            title="O Poço"
+            class="filme suspense"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/horror/mama.jpg"
+            alt="Mama"
+            title="Mama"
+            class="filme terror"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/horror/a-bruxa.jpg"
+            alt="A Bruxa"
+            title="A Bruxa"
+            class="filme terror"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/horror/boneco-do-mal.jpg"
+            alt="Boneco do Mal"
+            title="Boneco do Mal"
+            class="filme terror"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/horror/hereditario.jpg"
+            alt="Hereditário"
+            title="Hereditário"
+            class="filme terror"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/horror/midsommar.jpg"
+            alt="Midsommar"
+            title="Midsommar"
+            class="filme terror"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/horror/tin-e-tina.jpg"
+            alt="Tin e Tina"
+            title="Tin e Tina"
+            class="filme terror"
+            onclick="exibirModal(this)"
+          />
+
+          <img
+            src="assets/movies/horror/conferencia-mortal.jpg"
+            alt="Conferência Mortal"
+            title="Conferência Mortal"
+            class="filme terror"
+            onclick="exibirModal(this)"
+          />
+        </div>
+
+        <dialog class="modal"></dialog>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #f4f4f4;
+  --margin-botton: 16rem;
+  --max-width: 72rem;
+  --gap: 4rem;
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.brand-gradient {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    #e763d6,
+    #d06ee2,
+    #b778ea,
+    #9c80ef,
+    #7f86f0,
+    #6292f7,
+    #409dfa,
+    #00a7fa,
+    #00b9fb,
+    #00c9f4,
+    #00d7e6,
+    #e763d6
+  );
+}
+
+body {
+  margin: 0 2rem;
+  font-size: 1.8rem;
+  font-family: "Space Grotesk", sans-serif;
+
+  font-style: normal;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Loading */
+
+.loading {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.6rem;
+  height: 100vh;
+
+  user-select: none;
+}
+
+.spin {
+  background-color: var(--bg-color);
+  border: 0.5rem white solid;
+  border-radius: 100%;
+  padding: 2rem;
+  width: 2rem;
+
+  border-color: white white white transparent;
+  animation: rotation 0.5s 0s linear infinite reverse;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: none;
+  justify-items: center;
+
+  margin: auto;
+  max-width: 128rem;
+
+  animation: fade-in 1.6s;
+
+  /* border: solid blue 1px; */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    filter: blur(0.4rem);
+  }
+}
+
+/* Header */
+
+header {
+  display: flex;
+  align-items: center;
+
+  margin-top: 8rem;
+  margin-bottom: var(--margin-botton);
+
+  user-select: none;
+
+  /* border: solid 1px red; */
+}
+
+.logo {
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  animation: moving 1.2s ease-in-out alternate infinite;
+}
+
+@keyframes moving {
+  from {
+    transform: translateY(-0.7rem);
+  }
+  to {
+    transform: translateY(0.7rem);
+  }
+}
+
+/* Hero */
+
+.hero {
+  max-width: var(--max-width);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--gap);
+  margin-bottom: var(--margin-botton);
+
+  user-select: none;
+
+  /* border: solid 1px red; */
+}
+
+.hero__headline {
+  text-align: center;
+
+  line-height: 6.4rem;
+  font-size: 6.4rem;
+  font-weight: 400;
+}
+
+.hero__text {
+  text-align: center;
+}
+
+/* Productions */
+
+.productions {
+  max-width: var(--max-width);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-bottom: var(--margin-botton);
+  column-gap: 8rem;
+  row-gap: 4rem;
+
+  user-select: none;
+  pointer-events: none;
+
+  animation: 2.4s slidein ease-in-out;
+
+  /* border: solid 1px red; */
+}
+
+.productions__image {
+  height: 3.2rem;
+  filter: brightness(40%);
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(20rem);
+    filter: brightness(0%);
+    scale: 150%;
+  }
+
+  to {
+    transform: translateY(0);
+    filter: brightness(100%);
+    scale: 100%;
+  }
+}
+
+/* Categories */
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--gap);
+
+  user-select: none;
+  margin-bottom: var(--margin-botton);
+
+  /* border: solid 1px red; */
+}
+
+.categories__title {
+  font-weight: 500;
+  font-size: 3.2rem;
+  color: var(--text-color);
+}
+
+.btn {
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: var(--bg-color);
+
+  height: 4rem;
+  width: 8rem;
+
+  background-color: #9c80ef;
+  cursor: pointer;
+}
+
+.active,
+.btn:hover {
+  background-color: #0ce3d5;
+}
+
+.categories__elements {
+  display: grid;
+  grid-template-areas: "filme filme filme filme";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.filme {
+  background-color: #2196f3;
+  color: #ffffff;
+
+  width: 100%;
+  cursor: pointer;
+
+  -webkit-user-drag: none;
+  animation: fade-in-filmes 2.4s;
+}
+
+@keyframes fade-in-filmes {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Modal */
+
+dialog {
+  margin: auto;
+  max-width: 350px;
+  padding: 2.4rem;
+  background: linear-gradient(#121212, #121212) padding-box,
+    linear-gradient(to right, #e763d6, #00d7e6) border-box;
+  border-radius: 1.6rem;
+  border: 0.2rem solid transparent;
+}
+
+dialog > img {
+  margin-bottom: 2.4rem;
+}
+
+dialog > p:first-of-type {
+  margin-bottom: 2.4rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+dialog > p {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.close-btn {
+  border: transparent;
+  width: 100%;
+  margin-top: 2.4rem;
+  border-radius: 0.4rem;
+  background: var(--text-color);
+  padding: 7px 32px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+
+  cursor: pointer;
+  color: var(--bg-color);
+  transition: all 240ms linear;
+}
