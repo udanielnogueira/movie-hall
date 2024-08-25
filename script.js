@@ -1,6 +1,7 @@
 function carregar() {
   const loading = document.querySelector(".loading");
   const container = document.querySelector(".container");
+  const loading__text = document.querySelector(".loading__text");
 
   setTimeout(esconder, 1490);
   function esconder() {
@@ -10,6 +11,15 @@ function carregar() {
   setTimeout(exibir, 1500);
   function exibir() {
     container.style.display = "grid";
+  }
+
+  loading__text.innerText = "Filme bom?";
+  setTimeout(() => {
+    loading__text.innerText = "Calma aí...";
+  }, 800);
+
+  function esconder() {
+    loading.style.display = "none";
   }
 }
 
@@ -216,7 +226,7 @@ function exibirModal(filme) {
   console.log(filmeCerto);
 
   const container = document.querySelector(".container");
-  container.style.opacity = "20%";
+  container.style.opacity = "5%";
 
   const modal = document.querySelector(".modal");
   modal.innerHTML = `
@@ -231,7 +241,7 @@ function exibirModal(filme) {
     <p>Ano: ${filmeCerto.ano}</p>
     <p>Duração:  ${filmeCerto.duracao}</p>
     <p>Disponível na: ${filmeCerto.plataformas}.</p>
-    <button class='close-btn'>Voltar</button>
+    <button class='btn close-btn'>Voltar</button>
   `;
   modal.showModal();
 
@@ -242,3 +252,97 @@ function exibirModal(filme) {
     return modalAberto;
   });
 }
+
+// Share
+
+function share() {
+  if (navigator.share !== undefined) {
+    navigator
+      .share({
+        title: "Movie Hall",
+        text: "Achei seu filme!",
+        url: "https://seusite.com/",
+      })
+      .then(() => console.log("Successful share"))
+      .catch((error) => console.log("Error sharing", error));
+  }
+}
+
+// Frase
+
+frases = [
+  { frase: "O que fazemos na vida, ecoa na eternidade.", filme: "Gladiador" },
+  {
+    frase:
+      "Apenas porque uma coisa funciona, não quer dizer que ela não possa ser aprimorada.",
+    filme: "Pantera Negra",
+  },
+  {
+    frase:
+      "A felicidade pode ser encontrada mesmo nas horas mais difíceis, se você se lembrar de acender a luz.",
+    filme: "Harry Potter e o Prisioneiro de Azkaban",
+  },
+  {
+    frase:
+      "Não importa quanto a vida possa ser ruim, sempre existe algo que você pode fazer e triunfar. Enquanto há vida, há esperança.",
+    filme: "A Teoria de Tudo",
+  },
+  {
+    frase: "Não há lugar como o nosso lar.",
+    filme: "O Mágico de Oz",
+  },
+  {
+    frase:
+      "Tudo o que temos de decidir é o que fazer com o tempo que nos é dado.",
+    filme: "O Senhor dos Anéis A Sociedade do Anel",
+  },
+  {
+    frase: "Homens realmente grandes não nascem grandes, tornam-se grandes.",
+    filme: "O Poderoso Chefão",
+  },
+  {
+    frase:
+      "As pessoas que são loucas o suficiente para pensar que podem mudar o mundo são as que o fazem.",
+    filme: "Jobs",
+  },
+  {
+    frase:
+      "A flor que desabrocha na adversidade é a mais rara e mais bela de todas.",
+    filme: "Mulan",
+  },
+  {
+    frase: "Às vezes, o caminho certo não é o mais fácil.",
+    filme: "Pocahontas",
+  },
+  {
+    frase:
+      "Quando a vida te decepciona, qual é a solução? Simplesmente continue a nadar.",
+    filme: "Procurando Nemo",
+  },
+  {
+    frase: "O amor é colocar as necessidades de outras pessoas antes das suas.",
+    filme: "Frozen",
+  },
+  {
+    frase: "Grandes poderes trazem grandes responsabilidades.",
+    filme: "Homem-Aranha",
+  },
+  {
+    frase: "Que a força esteja com você!",
+    filme: "Star Wars",
+  },
+];
+
+let frasesLength = frases.length;
+const fraseTexto = document.querySelector(".frase__texto");
+const fraseFilme = document.querySelector(".frase__filme");
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+let aleatorio = getRandomInt(0, frasesLength);
+
+fraseTexto.innerText = frases[aleatorio].frase;
+fraseFilme.innerHTML = `- ${frases[aleatorio].filme}`;

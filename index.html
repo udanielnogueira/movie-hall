@@ -15,24 +15,33 @@
   </head>
   <body onload="carregar(), exibirSuspense()">
     <div class="loading">
-      <div class="spin"></div>
-      <p>Carregando</p>
+      <div class="loading__spin"></div>
+      <p class="loading__text"></p>
     </div>
 
     <div class="container">
       <header>
-        <p class="logo">🦄<span class="brand-gradient">Movie Hall</span></p>
+        <p class="logo">🦄<span class="gradient-text">Movie Hall</span></p>
       </header>
+
       <div class="hero">
         <h1 class="hero__headline">
           Para de rolar a tela...
-          <span class="brand-gradient">achei seu filme</span>
+          <span class="gradient-text">achei seu filme</span>
         </h1>
+
         <p class="hero__text">
           O Movie Hall é uma plataforma pra você ficar sabendo dos melhores
           filmes de cada categoria. Nosso processo é totalmente humanizado e, em
           modéstia parte, baseado em escolhas de muito bom gosto.
         </p>
+
+        <div class="hero__btns">
+          <a href="#categories" class="btn">Ver Indicações</a>
+          <a href="javascript:void(0)" onclick="share()" class="btn">
+            Compartilhar App
+          </a>
+        </div>
       </div>
 
       <div class="productions">
@@ -78,10 +87,10 @@
         />
       </div>
 
-      <div class="categories">
+      <div id="categories" class="categories">
         <h2 class="categories__title">Categorias</h2>
 
-        <div id="myBtnContainer">
+        <div id="categories__btns">
           <button class="btn btnSuspense active" onclick="exibirSuspense()">
             Suspense
           </button>
@@ -272,6 +281,24 @@
 
         <dialog class="modal"></dialog>
       </div>
+
+      <div class="frase">
+        <div class="frase__texto"></div>
+        <div class="frase__filme"></div>
+      </div>
+
+      <footer>
+        <p>&copy Movie Hall 2024</p>
+        <p>
+          Made with 💜 by
+          <a
+            href="https://www.linkedin.com/in/udanielnogueira/"
+            target="_blank"
+          >
+            NOGUEIRA, Daniel
+          </a>
+        </p>
+      </footer>
     </div>
   </body>
 </html>
