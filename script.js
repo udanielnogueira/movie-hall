@@ -101,13 +101,13 @@ catalogo = [
   {
     nome: "Corra",
     ano: "2017",
-    plataformas: "Disney+, Netflix e Prime Video",
+    plataformas: "Disney+ · Netflix · Prime Video",
     duracao: "1h 44min",
   },
   {
     nome: "O Homem nas Trevas 2",
     ano: "2021",
-    plataformas: "Netflix e Prime Video",
+    plataformas: "Netflix · Prime Video",
     duracao: "1h 38min",
   },
   {
@@ -149,25 +149,25 @@ catalogo = [
   {
     nome: "Mama",
     ano: "2013",
-    plataformas: "Netflix e Prime Video",
+    plataformas: "Netflix · Prime Video",
     duracao: "1h 40min",
   },
   {
     nome: "A Bruxa",
     ano: "2015",
-    plataformas: "Netflix e Prime Video",
+    plataformas: "Netflix · Prime Video",
     duracao: "1h 32min",
   },
   {
     nome: "Boneco do Mal",
     ano: "2016",
-    plataformas: "Netflix e Prime Video",
+    plataformas: "Netflix · Prime Video",
     duracao: "1h 37min",
   },
   {
     nome: "Hereditário",
     ano: "2019",
-    plataformas: "Max, Netflix e Prime Video",
+    plataformas: "Max · Netflix · Prime Video",
     duracao: "2h 7min",
   },
   {
@@ -197,7 +197,7 @@ catalogo = [
   {
     nome: "Invocação do Mal 3",
     ano: "2021",
-    plataformas: "Max e Prime Video",
+    plataformas: "Max · Prime Video",
     duracao: "1h 52min",
   },
   {
@@ -232,15 +232,15 @@ function exibirModal(filme) {
   modal.innerHTML = `
    <img
       src="${filme.src}"
-      alt="${filmeCerto.title}"
-      title="${filmeCerto.title}"
+      alt="${filmeCerto.nome}"
+      title="${filmeCerto.nome}"
       class="filme"
     />
     <div class="imagem-modal"></div>
     <p>${filmeCerto.nome}</p>
-    <p>Ano: ${filmeCerto.ano}</p>
-    <p>Duração:  ${filmeCerto.duracao}</p>
-    <p>Disponível na: ${filmeCerto.plataformas}.</p>
+    <p>${filmeCerto.ano} · ${filmeCerto.duracao}</p>
+    <p>Plataformas</p>
+    <p>${filmeCerto.plataformas}</p>
     <button class='btn close-btn'>Voltar</button>
   `;
   modal.showModal();
@@ -249,7 +249,6 @@ function exibirModal(filme) {
   closeButton.addEventListener("click", () => {
     modal.close();
     container.style.opacity = "100%";
-    return modalAberto;
   });
 }
 

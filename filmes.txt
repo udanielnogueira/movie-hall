@@ -25,3 +25,5 @@ Atualizações
 - Botão de compartilhar
 - Tags coloridas de categoria/sentimento do filme
 - otimizar imagens
+- onmouseover nos filmes
+- adicionar classificação
