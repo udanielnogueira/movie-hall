@@ -27,3 +27,4 @@ Atualizações
 - otimizar imagens
 - onmouseover nos filmes
 - adicionar classificação
+- remover alguns comentários

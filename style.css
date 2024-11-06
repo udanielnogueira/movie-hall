@@ -1,54 +1,22 @@
 :root {
-  --max-width: 72rem;
-  --max-width-large: 128rem;
-
-  --bg-color: #121212;
-  --text-color: #f4f4f4;
-  --off-white: #999;
-
-  --gray: #171717;
-  --gray-light: #202020;
+  font-size: 62.5%;
 
   --box-gap: 4rem;
-  --box-margin-bottom: 16rem;
+  --box-mb: 16rem;
 
-  --gradient-right: linear-gradient(
-    to right,
-    #e763d6,
-    #d06ee2,
-    #b778ea,
-    #9c80ef,
-    #7f86f0,
-    #6292f7,
-    #409dfa,
-    #00a7fa,
-    #00b9fb,
-    #00c9f4,
-    #00d7e6
-  );
+  --back-color: #09090b;
+  --text-color: #f4f4f4;
 
-  --gradient-top-right: linear-gradient(
-    to top right,
-    #e763d6,
-    #d06ee2,
-    #b778ea,
-    #9c80ef,
-    #7f86f0,
-    #6292f7,
-    #409dfa,
-    #00a7fa,
-    #00b9fb,
-    #00c9f4,
-    #00d7e6
-  );
+  --gray-color-1: #171717;
+  --gray-color-2: #202020;
+  --gray-color-3: #999999;
 
-  --box-shadow-gray: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1),
-    0 0.4rem 0.4rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1),
-    0 0 0 0.1rem rgba(0, 0, 0, 0.1),
-    inset 0 0 0 0.1rem rgba(255, 255, 255, 0.03),
-    inset 0 0.1rem 0 rgba(255, 255, 255, 0.03);
+  --max-width-normal: 72rem;
+  --max-width-large: 128rem;
 
-  font-size: 62.5%;
+  --gradient-right: linear-gradient(to right, #e763d6, #d06ee2, #b778ea, #9c80ef, #7f86f0, #6292f7, #409dfa, #00a7fa, #00b9fb, #00c9f4, #00d7e6);
+  --gradient-top-right: linear-gradient(to top right, #e763d6, #d06ee2, #b778ea, #9c80ef, #7f86f0, #6292f7, #409dfa, #00a7fa, #00b9fb, #00c9f4, #00d7e6);
+  --box-shadow-gray: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1), 0 0.4rem 0.4rem rgba(0, 0, 0, 0.1), 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1), 0 0 0 0.1rem rgba(0, 0, 0, 0.1), inset 0 0 0 0.1rem rgba(255, 255, 255, 0.03), inset 0 0.1rem 0 rgba(255, 255, 255, 0.03);
 }
 
 * {
@@ -61,24 +29,19 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
   margin: 0 2rem;
-  font-size: 1.8rem;
-  font-family: "Space Grotesk", sans-serif;
 
+  font-size: 1.8rem;
   font-style: normal;
+  font-family: 'Space Grotesk', sans-serif;
+
   color: var(--text-color);
-  background-color: var(--bg-color);
+  background-color: var(--back-color);
 }
 
-.gradient-text {
-  color: transparent;
-  background-clip: text;
-  background-image: var(--gradient-right);
+a {
+  text-decoration: none;
 }
 
 .btn {
@@ -92,35 +55,38 @@ body {
 
   font-weight: 500;
   font-size: 1.4rem;
-  border-radius: 0.4rem;
 
-  background: var(--gray);
+  border-radius: 0.4rem;
   color: var(--text-color);
+  background: var(--gray-color-1);
+  box-shadow: var(--box-shadow-gray);
 
   height: 4rem;
   width: 16rem;
   cursor: pointer;
-
   transition: all 240ms linear;
-  box-shadow: var(--box-shadow-gray);
 }
 
 .btn:hover {
-  background-color: var(--gray-light);
+  background-color: var(--gray-color-2);
+}
+
+.gradient-text {
+  color: transparent;
+  background-clip: text;
+  background-image: var(--gradient-right);
 }
 
 /* Loading */
 
 .loading {
   display: flex;
-  flex-direction: column;
-
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 
   gap: 1.6rem;
   height: 100vh;
-
   user-select: none;
 }
 
@@ -130,7 +96,7 @@ body {
 
   border-radius: 100%;
   border: 0.5rem white solid;
-  background-color: var(--bg-color);
+  background-color: var(--back-color);
 
   border-color: white white white transparent;
   animation: rotation 0.5s 0s linear infinite reverse;
@@ -150,11 +116,8 @@ body {
   justify-items: center;
 
   margin: auto;
-  max-width: var(--max-width-large);
-
   animation: fade-in 1.6s;
-
-  /* border: solid blue 0.1rem; */
+  max-width: var(--max-width-large);
 }
 
 @keyframes fade-in {
@@ -168,16 +131,13 @@ body {
 
 header {
   margin-top: 8rem;
-  margin-bottom: var(--box-margin-bottom);
-
   user-select: none;
-  /* border: solid 0.1rem red; */
+  margin-bottom: var(--box-mb);
 }
 
 .logo {
   font-weight: 700;
   font-size: 2.4rem;
-
   animation: moving 1.2s ease-in-out alternate infinite;
 }
 
@@ -193,31 +153,26 @@ header {
 /* Hero */
 
 .hero {
-  max-width: var(--max-width);
-
   display: flex;
-  flex-direction: column;
-
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 
-  gap: var(--box-gap);
-  margin-bottom: var(--box-margin-bottom);
-
   user-select: none;
-
-  /* border: solid 0.1rem red; */
+  gap: var(--box-gap);
+  margin-bottom: var(--box-mb);
+  max-width: var(--max-width-normal);
 }
 
 .hero__headline {
+  font-size: 8rem;
   font-weight: 400;
-  font-size: 6.4rem;
-
   text-align: center;
-  line-height: 6.4rem;
+  line-height: 8rem;
 }
 
 .hero__text {
+  font-size: 2.4rem;
   text-align: center;
 }
 
@@ -237,24 +192,20 @@ header {
 /* Productions */
 
 .productions {
-  max-width: var(--max-width-large);
-  margin-bottom: var(--box-margin-bottom);
-
   display: flex;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: center;
-
-  row-gap: 2rem;
-  column-gap: var(--box-gap);
 
   user-select: none;
   pointer-events: none;
 
-  animation: 2.4s slidein ease-in-out;
+  row-gap: 2rem;
+  column-gap: var(--box-gap);
+  margin-bottom: var(--box-mb);
+  max-width: var(--max-width-large);
 
-  /* border: solid 0.1rem red; */
+  animation: 2.4s slidein ease-in-out;
 }
 
 .productions__image {
@@ -264,14 +215,14 @@ header {
 
 @keyframes slidein {
   from {
-    transform: translateY(20rem);
-    filter: brightness(0%);
     scale: 150%;
+    filter: brightness(0%);
+    transform: translateY(20rem);
   }
   to {
-    transform: translateY(0);
-    filter: brightness(100%);
     scale: 100%;
+    filter: brightness(100%);
+    transform: translateY(0);
   }
 }
 
@@ -279,17 +230,13 @@ header {
 
 .categories {
   display: flex;
-  flex-direction: column;
-
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 
-  gap: var(--box-gap);
-
   user-select: none;
-  margin-bottom: var(--box-margin-bottom);
-
-  /* border: solid 0.1rem red; */
+  gap: var(--box-gap);
+  margin-bottom: var(--box-mb);
 }
 
 .categories__title {
@@ -307,16 +254,16 @@ header {
 }
 
 #categories__btns {
-  display: flex;
   gap: 0.8rem;
+  display: flex;
 }
 
 .categories__elements {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-
   gap: 1.6rem;
   flex-wrap: wrap;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .filme {
@@ -336,38 +283,26 @@ header {
   }
 }
 
-.suspense,
-.terror {
+.terror,
+.suspense {
   transition: transform 700ms;
 }
 
-.suspense:hover,
-.terror:hover {
+.terror:hover,
+.suspense:hover {
   transform: scale(103%);
 }
-
-/* @keyframes darker {
-  to {
-    scale: 100%;
-  }
-} */
 
 /* Modal */
 
 dialog {
   margin: auto;
+  width: 35rem;
   padding: 2.4rem;
 
-  width: 35rem;
-  background-color: var(--bg-color);
-
   border-radius: 0.8rem;
-  border: 0.1rem solid var(--gray-light);
-
-  /* 
-    background: linear-gradient(#121212, #121212) padding-box,
-    linear-gradient(to right, #3d243a, #173335) border-box; 
-  */
+  background-color: var(--back-color);
+  border: 0.1rem solid var(--gray-color-2);
 }
 
 dialog > img {
@@ -376,7 +311,7 @@ dialog > img {
 
 dialog > p {
   text-align: left;
-  color: var(--off-white);
+  color: var(--gray-color-3);
 }
 
 dialog > p:first-of-type {
@@ -394,7 +329,7 @@ dialog > p:nth-of-type(3) {
 }
 
 dialog > p:nth-of-type(4) {
-  color: var(--off-white);
+  color: var(--gray-color-3);
   font-size: 1.6rem;
 }
 
@@ -403,48 +338,20 @@ dialog > .btn {
   margin-top: 2.4rem;
 }
 
-/* Frase */
-
-.frase {
-  max-width: var(--max-width-large);
-  margin-bottom: var(--box-margin-bottom);
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 0.5rem;
-  text-align: center;
-
-  font-size: 1.6rem;
-  color: var(--text-color);
-
-  display: none;
-  user-select: none;
-}
-
-.frase__filme {
-  font-size: 1.4rem;
-}
-
 /* Footer */
 
 footer {
-  margin-bottom: 2.4rem;
-  max-width: var(--max-width);
+  font-weight: 400;
+  font-size: 1.4rem;
 
   display: flex;
-  flex-direction: column;
-
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 
-  font-size: 1.4rem;
-  font-weight: 500;
-
   user-select: none;
+  margin-bottom: 2.4rem;
+  max-width: var(--max-width-normal);
 }
 
 footer a {

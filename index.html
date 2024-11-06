@@ -6,10 +6,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+    <script src="data.js" defer></script>
     <script src="script.js" defer></script>
     <title>Movie Hall</title>
   </head>
@@ -21,283 +19,82 @@
 
     <div class="container">
       <header>
-        <p class="logo">🦄<span class="gradient-text">Movie Hall</span></p>
+        <a href="">
+          <p class="logo">🦄<span class="gradient-text">Movie Hall</span></p>
+        </a>
       </header>
 
       <div class="hero">
         <h1 class="hero__headline">
-          Para de rolar a tela...
-          <span class="gradient-text">achei seu filme</span>
+          Para de rolar a tela
+          <span class="gradient-text">achei o seu filme</span>
         </h1>
 
-        <p class="hero__text">
-          O Movie Hall é uma plataforma pra você ficar sabendo dos melhores
-          filmes de cada categoria. Nosso processo é totalmente humanizado e, em
-          modéstia parte, baseado em escolhas de muito bom gosto.
-        </p>
+        <p class="hero__text">Movie Hall + Você = Combo perfeito 🍿</p>
 
         <div class="hero__btns">
           <a href="#categories" class="btn">Ver Indicações</a>
-          <a href="javascript:void(0)" onclick="share()" class="btn">
-            Compartilhar App
-          </a>
+          <a href="javascript:void(0)" onclick="share()" class="btn"> Compartilhar App </a>
         </div>
       </div>
 
       <div class="productions">
-        <img
-          class="productions__image"
-          src="assets/productions/universal.png"
-          alt="amazon"
-        />
-        <img
-          class="productions__image"
-          src="assets/productions/warner.png"
-          alt="amazon"
-        />
-        <img
-          class="productions__image"
-          src="assets/productions/amazon.png"
-          alt="amazon"
-        />
-        <img
-          class="productions__image"
-          src="assets/productions/columbia.png"
-          alt="amazon"
-        />
-        <img
-          class="productions__image"
-          src="assets/productions/disney.png"
-          alt="amazon"
-        />
-        <img
-          class="productions__image"
-          src="assets/productions/netflix.png"
-          alt="amazon"
-        />
-        <img
-          class="productions__image"
-          src="assets/productions/paramount.png"
-          alt="amazon"
-        />
-        <img
-          class="productions__image"
-          src="assets/productions/fox.png"
-          alt="amazon"
-        />
+        <img class="productions__image" src="assets/productions/universal.png" alt="amazon" />
+        <img class="productions__image" src="assets/productions/warner.png" alt="amazon" />
+        <img class="productions__image" src="assets/productions/amazon.png" alt="amazon" />
+        <img class="productions__image" src="assets/productions/columbia.png" alt="amazon" />
+        <img class="productions__image" src="assets/productions/disney.png" alt="amazon" />
+        <img class="productions__image" src="assets/productions/netflix.png" alt="amazon" />
+        <img class="productions__image" src="assets/productions/paramount.png" alt="amazon" />
+        <img class="productions__image" src="assets/productions/fox.png" alt="amazon" />
       </div>
 
       <div id="categories" class="categories">
         <h2 class="categories__title">Categorias</h2>
 
         <div id="categories__btns">
-          <button class="btn btnSuspense active" onclick="exibirSuspense()">
-            Suspense
-          </button>
+          <button class="btn btnSuspense active" onclick="exibirSuspense()">Suspense</button>
           <button class="btn btnTerror" onclick="exibirTerror()">Terror</button>
           <button class="btn btnTodos" onclick="exibirTodos()">Todos</button>
         </div>
 
         <div class="categories__elements" onload="exibirSuspense()">
           <!-- Suspense -->
-          <img
-            src="assets/movies/suspense/fratura.jpg"
-            alt="Fratura"
-            title="Fratura"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/fuja.jpg"
-            alt="Fuja"
-            title="Fuja"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/corra.jpg"
-            alt="Corra"
-            title="Corra"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/o-homem-nas-trevas-2.jpg"
-            alt="O Homem nas Trevas 2"
-            title="O Homem nas Trevas 2"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/a-sociedade-da-neve.jpg"
-            alt="A Sociedade da Neve"
-            title="A Sociedade da Neve"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/bird-box.jpg"
-            alt="Bird Box"
-            title="Bird Box"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/destinos-a-deriva.jpg"
-            alt="Destinos a Deriva"
-            title="Destinos a Deriva"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/o-poco.jpg"
-            alt="O Poço"
-            title="O Poço"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/a-queda.jpg"
-            alt="A Queda"
-            title="A Queda"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/nos.jpg"
-            alt="Nós"
-            title="Nós"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/suspense/o-enfermeiro-da-noite.jpg"
-            alt="O Enfermeiro da Noite"
-            title="O Enfermeiro da Noite"
-            class="filme suspense"
-            onclick="exibirModal(this)"
-          />
+          <img src="assets/movies/suspense/fratura.jpg" alt="Fratura" title="Fratura" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/fuja.jpg" alt="Fuja" title="Fuja" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/corra.jpg" alt="Corra" title="Corra" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/o-homem-nas-trevas-2.jpg" alt="O Homem nas Trevas 2" title="O Homem nas Trevas 2" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/a-sociedade-da-neve.jpg" alt="A Sociedade da Neve" title="A Sociedade da Neve" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/bird-box.jpg" alt="Bird Box" title="Bird Box" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/destinos-a-deriva.jpg" alt="Destinos a Deriva" title="Destinos a Deriva" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/o-poco.jpg" alt="O Poço" title="O Poço" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/a-queda.jpg" alt="A Queda" title="A Queda" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/nos.jpg" alt="Nós" title="Nós" class="filme suspense" onclick="exibirModal(this)" />
+          <img src="assets/movies/suspense/o-enfermeiro-da-noite.jpg" alt="O Enfermeiro da Noite" title="O Enfermeiro da Noite" class="filme suspense" onclick="exibirModal(this)" />
 
           <!-- Terror -->
-
-          <img
-            src="assets/movies/horror/mama.jpg"
-            alt="Mama"
-            title="Mama"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/a-bruxa.jpg"
-            alt="A Bruxa"
-            title="A Bruxa"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/boneco-do-mal.jpg"
-            alt="Boneco do Mal"
-            title="Boneco do Mal"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/hereditario.jpg"
-            alt="Hereditário"
-            title="Hereditário"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/midsommar.jpg"
-            alt="Midsommar"
-            title="Midsommar"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/tin-e-tina.jpg"
-            alt="Tin e Tina"
-            title="Tin e Tina"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/conferencia-mortal.jpg"
-            alt="Conferência Mortal"
-            title="Conferência Mortal"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/convite-maldito.jpg"
-            alt="Convite Maldito"
-            title="Convite Maldito"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/invocacao-do-mal-3.jpg"
-            alt="Invocação do Mal 3"
-            title="Invocação do Mal 3"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/morte-morte-morte.jpg"
-            alt="Morte Morte Morte"
-            title="Morte Morte Morte"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
-
-          <img
-            src="assets/movies/horror/o-telefone-preto.jpg"
-            alt="O Telefone Preto"
-            title="O Telefone Preto"
-            class="filme terror"
-            onclick="exibirModal(this)"
-          />
+          <img src="assets/movies/horror/mama.jpg" alt="Mama" title="Mama" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/a-bruxa.jpg" alt="A Bruxa" title="A Bruxa" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/boneco-do-mal.jpg" alt="Boneco do Mal" title="Boneco do Mal" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/hereditario.jpg" alt="Hereditário" title="Hereditário" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/midsommar.jpg" alt="Midsommar" title="Midsommar" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/tin-e-tina.jpg" alt="Tin e Tina" title="Tin e Tina" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/conferencia-mortal.jpg" alt="Conferência Mortal" title="Conferência Mortal" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/convite-maldito.jpg" alt="Convite Maldito" title="Convite Maldito" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/invocacao-do-mal-3.jpg" alt="Invocação do Mal 3" title="Invocação do Mal 3" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/morte-morte-morte.jpg" alt="Morte Morte Morte" title="Morte Morte Morte" class="filme terror" onclick="exibirModal(this)" />
+          <img src="assets/movies/horror/o-telefone-preto.jpg" alt="O Telefone Preto" title="O Telefone Preto" class="filme terror" onclick="exibirModal(this)" />
         </div>
 
         <dialog class="modal"></dialog>
       </div>
 
-      <div class="frase">
-        <div class="frase__texto"></div>
-        <div class="frase__filme"></div>
-      </div>
-
       <footer>
+        <p>Movie Hall 2024 Todos os direitos reservados</p>
         <p>
-          Movie Hall 2024 · By
-          <a
-            href="https://www.linkedin.com/in/udanielnogueira/"
-            target="_blank"
-          >
-            Daniel Nogueira
-          </a>
+          UX/UI e Front-End por
+          <a href="https://www.linkedin.com/in/udanielnogueira/" target="_blank"> Nogueira</a>
         </p>
-        <p></p>
       </footer>
     </div>
   </body>
