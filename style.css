@@ -371,6 +371,7 @@ footer a {
   }
 
   .container {
+    animation: none;
     max-width: 78rem;
   }
 
