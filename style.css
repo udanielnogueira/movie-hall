@@ -172,7 +172,7 @@ header {
 }
 
 .hero__text {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
@@ -357,4 +357,60 @@ footer {
 footer a {
   color: var(--text-color);
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --box-mb: 8rem;
+    --box-gap: 2rem;
+  }
+
+  body {
+    margin: 0 0.8rem;
+  }
+
+  .container {
+    max-width: 78rem;
+  }
+
+  .hero__headline {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .btn {
+    width: 12rem;
+    height: 3.2rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  .hero__btns {
+    gap: 0.4rem;
+  }
+
+  #categories__btns {
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .categories__title {
+    font-weight: 400;
+    font-size: 2.4rem;
+  }
+
+  .categories__elements {
+    gap: 0.4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    font-size: 1.2rem;
+  }
+
+  .productions__image {
+    height: 2.4rem;
+  }
 }
