@@ -430,15 +430,14 @@ footer a {
 
   @keyframes slidein {
     from {
-      /* transform: translateY(3.2rem);
-      transform: translateY(20rem); */
-      filter: brightness(0%);
-      scale: 150%;
+      transform: translateY(7.2rem);
+      /* filter: brightness(0%); */
+      /* scale: 150%; */
     }
     to {
-      /* transform: translateY(0); */
-      filter: brightness(100%);
-      scale: 100%;
+      transform: translateY(0);
+      /* filter: brightness(100%); */
+      /* scale: 100%; */
     }
   }
 
