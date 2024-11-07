@@ -425,11 +425,9 @@ footer a {
 
   @keyframes slidein {
     from {
-      filter: brightness(0%);
       transform: translateY(24rem);
     }
     to {
-      filter: brightness(100%);
       transform: translateY(0);
     }
   }
