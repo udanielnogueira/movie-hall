@@ -424,12 +424,12 @@ footer a {
   }
 
   .productions {
-    animation: 2.4s slidein linear;
+    animation: 2.4s slidein ease-in-out;
   }
 
   @keyframes slidein {
     from {
-      transform: translateY(24rem);
+      transform: translateY(6.4rem);
     }
     to {
       transform: translateY(0);
