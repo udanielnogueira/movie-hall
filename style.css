@@ -138,6 +138,7 @@ header {
 .logo {
   font-weight: 700;
   font-size: 2.4rem;
+  color: var(--text-color);
   animation: moving 1.2s ease-in-out alternate infinite;
 }
 
