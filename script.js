@@ -125,7 +125,7 @@ function share() {
       .share({
         title: 'Movie Hall',
         text: 'Achei seu filme!',
-        url: 'https://seusite.com/',
+        url: 'https://udanielnogueira.github.io/movie-hall/',
       })
       .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing', error));
