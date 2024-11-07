@@ -124,7 +124,7 @@ function share() {
     navigator
       .share({
         title: 'Movie Hall',
-        text: 'Achei seu filme!',
+        text: 'Cansado de rolar a tela? As melhores sugestões de filme estão aqui! Acesse: ',
         url: 'https://udanielnogueira.github.io/movie-hall/',
       })
       .then(() => console.log('Successful share'))
