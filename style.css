@@ -139,12 +139,8 @@ header {
   font-weight: 700;
   font-size: 2.4rem;
   color: var(--text-color);
+  animation: moving 1.2s ease-in-out alternate infinite;
 }
-
-/* 
-Para animar a logo use em .logo
-animation: moving 1.2s ease-in-out alternate infinite; 
-*/
 
 @keyframes moving {
   from {
@@ -436,5 +432,8 @@ footer a {
       filter: brightness(100%);
       transform: translateY(0);
     }
+  }
+
+  @keyframes moving {
   }
 }
