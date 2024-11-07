@@ -374,14 +374,18 @@ footer a {
   }
 
   .hero__headline {
+    max-width: 40rem;
     font-size: 4rem;
     line-height: 4rem;
+  }
+
+  .hero__text {
+    max-width: 36rem;
   }
 
   .btn {
     width: 12rem;
     height: 3.2rem;
-    font-weight: 400;
     font-size: 1.2rem;
   }
 
