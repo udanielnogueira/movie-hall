@@ -370,6 +370,18 @@ footer a {
     margin: 0 0.8rem;
   }
 
+  @keyframes moving {
+  }
+
+  @keyframes slidein {
+    from {
+      transform: translateY(7.2rem);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
   .container {
     animation: none;
     max-width: 78rem;
@@ -406,6 +418,10 @@ footer a {
     justify-content: center;
   }
 
+  .categories {
+    animation: 2.4s slidein ease-in-out;
+  }
+
   .categories__title {
     font-weight: 400;
     font-size: 2.4rem;
@@ -421,26 +437,6 @@ footer a {
   }
 
   .productions__image {
-    height: 2.4rem;
-  }
-
-  .productions {
-    animation: 2.4s slidein ease-in-out;
-  }
-
-  @keyframes slidein {
-    from {
-      transform: translateY(7.2rem);
-      /* filter: brightness(0%); */
-      /* scale: 150%; */
-    }
-    to {
-      transform: translateY(0);
-      /* filter: brightness(100%); */
-      /* scale: 100%; */
-    }
-  }
-
-  @keyframes moving {
+    height: 3.2rem;
   }
 }
