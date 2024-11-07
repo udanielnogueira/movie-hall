@@ -423,6 +423,10 @@ footer a {
     height: 2.4rem;
   }
 
+  .productions {
+    animation: 2.4s slidein linear;
+  }
+
   @keyframes slidein {
     from {
       transform: translateY(24rem);
