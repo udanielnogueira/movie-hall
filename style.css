@@ -139,8 +139,12 @@ header {
   font-weight: 700;
   font-size: 2.4rem;
   color: var(--text-color);
-  animation: moving 1.2s ease-in-out alternate infinite;
 }
+
+/* 
+Para animar a logo use em .logo
+animation: moving 1.2s ease-in-out alternate infinite; 
+*/
 
 @keyframes moving {
   from {
@@ -217,12 +221,12 @@ header {
 @keyframes slidein {
   from {
     scale: 150%;
-    filter: brightness(0%);
+    /* filter: brightness(0%); */
     transform: translateY(20rem);
   }
   to {
     scale: 100%;
-    filter: brightness(100%);
+    /* filter: brightness(100%); */
     transform: translateY(0);
   }
 }
@@ -372,6 +376,10 @@ footer a {
 
   .container {
     max-width: 78rem;
+  }
+
+  .logo {
+    font-size: 2rem;
   }
 
   .hero__headline {
