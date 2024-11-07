@@ -221,12 +221,12 @@ animation: moving 1.2s ease-in-out alternate infinite;
 @keyframes slidein {
   from {
     scale: 150%;
-    /* filter: brightness(0%); */
+    filter: brightness(0%);
     transform: translateY(20rem);
   }
   to {
     scale: 100%;
-    /* filter: brightness(100%); */
+    filter: brightness(100%);
     transform: translateY(0);
   }
 }
@@ -425,5 +425,16 @@ footer a {
 
   .productions__image {
     height: 2.4rem;
+  }
+
+  @keyframes slidein {
+    from {
+      filter: brightness(0%);
+      transform: translateY(24rem);
+    }
+    to {
+      filter: brightness(100%);
+      transform: translateY(0);
+    }
   }
 }
