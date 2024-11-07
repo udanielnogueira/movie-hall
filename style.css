@@ -429,7 +429,7 @@ footer a {
 
   @keyframes slidein {
     from {
-      transform: translateY(6.4rem);
+      transform: translateY(3.2rem);
     }
     to {
       transform: translateY(0);
