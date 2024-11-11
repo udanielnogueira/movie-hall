@@ -1,4 +1,30 @@
 catalogo = [
+  // Ação
+  {
+    nome: 'John Wick 3 Parabellum',
+    ano: '2019',
+    duracao: '2h 10min',
+    plataformas: 'Netflix • Prime Video • Telecine',
+  },
+  {
+    nome: 'Nada de Novo no Front',
+    ano: '2022',
+    duracao: '2h 28min',
+    plataformas: 'Netflix',
+  },
+  {
+    nome: 'Resgate 2',
+    ano: '2023',
+    duracao: '2h 03min',
+    plataformas: 'Netflix',
+  },
+  {
+    nome: 'Sniper Americano',
+    ano: '2015',
+    duracao: '2h 07min',
+    plataformas: 'Max • Prime Video',
+  },
+
   // Suspense
   {
     nome: 'Fratura',

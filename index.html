@@ -11,7 +11,7 @@
     <script src="script.js" defer></script>
     <title>Movie Hall</title>
   </head>
-  <body onload="carregar(), exibirSuspense()">
+  <body onload="carregar(), exibirAction()">
     <div class="loading">
       <div class="loading__spin"></div>
       <p class="loading__text"></p>
@@ -53,12 +53,19 @@
         <h2 class="categories__title">Categorias</h2>
 
         <div id="categories__btns">
-          <button class="btn btnSuspense active" onclick="exibirSuspense()">Suspense</button>
+          <button class="btn btnAction" onclick="exibirAction()">Ação</button>
+          <button class="btn btnSuspense" onclick="exibirSuspense()">Suspense</button>
           <button class="btn btnTerror" onclick="exibirTerror()">Terror</button>
           <button class="btn btnTodos" onclick="exibirTodos()">Todos</button>
         </div>
 
-        <div class="categories__elements" onload="exibirSuspense()">
+        <div class="categories__elements">
+          <!-- Ação -->
+          <img src="assets/movies/action/john-wick-3-parabellum.webp" alt="John Wick 3 Parabellum" title="John Wick 3 Parabellum" class="filme action" onclick="exibirModal(this)" />
+          <img src="assets/movies/action/nada-de-novo-no-front.jpg" alt="Nada de Novo no Front" title="Nada de Novo no Front" class="filme action" onclick="exibirModal(this)" />
+          <img src="assets/movies/action/resgate-2.jpg" alt="Resgate 2" title="Resgate 2" class="filme action" onclick="exibirModal(this)" />
+          <img src="assets/movies/action/sniper-americano.png" alt="Sniper Americano" title="Sniper Americano" class="filme action" onclick="exibirModal(this)" />
+
           <!-- Suspense -->
           <img src="assets/movies/suspense/fratura.jpg" alt="Fratura" title="Fratura" class="filme suspense" onclick="exibirModal(this)" />
           <img src="assets/movies/suspense/fuja.jpg" alt="Fuja" title="Fuja" class="filme suspense" onclick="exibirModal(this)" />

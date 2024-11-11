@@ -21,6 +21,27 @@ function carregar() {
   }
 }
 
+// Exibir Ação
+
+function exibirAction() {
+  const btns = document.querySelectorAll('.btn');
+  btns.forEach((element) => {
+    element.classList.remove('active');
+  });
+
+  const btnAction = document.querySelector('.btnAction');
+  btnAction.classList.add('active');
+
+  const filmes = document.querySelectorAll('.filme');
+  filmes.forEach((element) => {
+    if (element.classList.contains('action')) {
+      element.style.display = 'block';
+    } else {
+      element.style.display = 'none';
+    }
+  });
+}
+
 // Exibir Suspense
 
 function exibirSuspense() {

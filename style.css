@@ -413,9 +413,13 @@ footer a {
 
   #categories__btns {
     gap: 0.4rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #categories__btns .btn {
+    width: 100%;
   }
 
   .categories {
@@ -437,6 +441,10 @@ footer a {
   }
 
   .productions__image {
-    height: 3.2rem;
+    height: 2.4rem;
+  }
+
+  #categories__btns {
+    justify-content: flex-start;
   }
 }
