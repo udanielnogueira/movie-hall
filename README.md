@@ -27,11 +27,13 @@ Descubra as melhores sugestões de filmes e em quais plataformas eles estão dis
 
 <h2 id="preview">Preview</h2>
 
-<h3>Desktop</h3>
+Desktop Showcase
 
 ![Desktop Preview](./assets/img/desktop-preview.png 'Desktop Preview')
 
-<h3>Mobile</h3>
+<br>
+
+Mobile Showcase
 
 <img src="./assets/img/mobile-preview.png">
 
