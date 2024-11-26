@@ -284,11 +284,13 @@ header {
   }
 }
 
+.action,
 .terror,
 .suspense {
   transition: transform 700ms;
 }
 
+.action:hover,
 .terror:hover,
 .suspense:hover {
   transform: scale(103%);
