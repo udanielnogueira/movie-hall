@@ -450,4 +450,8 @@ footer a {
   #categories__btns {
     justify-content: flex-start;
   }
+
+  .close-btn {
+    height: 4rem;
+  }
 }
