@@ -146,7 +146,7 @@ function share() {
       .share({
         title: 'Movie Hall',
         text: 'Cansado de rolar a tela? As melhores sugestões de filme estão aqui! Acesse: ',
-        url: 'https://udanielnogueira.github.io/movie-hall/',
+        url: 'https://movie-hall.vercel.app/',
       })
       .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing', error));
