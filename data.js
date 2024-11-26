@@ -24,6 +24,30 @@ catalogo = [
     duracao: '2h 07min',
     plataformas: 'Max • Prime Video',
   },
+  {
+    nome: 'Creed Nascido para Lutar',
+    ano: '2016',
+    duracao: '2h 07min',
+    plataformas: 'Prime Video • Telecine',
+  },
+  {
+    nome: 'Guerra Mundial Z',
+    ano: '2013',
+    duracao: '1h 56min',
+    plataformas: 'Prime Video',
+  },
+  {
+    nome: 'Rampage Destruição Total',
+    ano: '2018',
+    duracao: '1h 48min',
+    plataformas: 'Max • Prime Video',
+  },
+  {
+    nome: 'Tropa de Elite',
+    ano: '2007',
+    duracao: '1h 55min',
+    plataformas: 'Prime Video • Globoplay • Telecine',
+  },
 
   // Suspense
   {
