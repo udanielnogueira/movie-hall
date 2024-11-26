@@ -54,7 +54,7 @@ Mobile Showcase
 
 <h2 id="deploy">Deploy</h2>
 
-[Movie Hall](https://udanielnogueira.github.io/movie-hall/)
+[Movie Hall](https://movie-hall.vercel.app/)
 
 <h2 id="highlights">Destaques</h2>
 
