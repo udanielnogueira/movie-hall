@@ -198,14 +198,14 @@ header {
   align-items: center;
   justify-content: center;
 
+  width: 72rem;
   user-select: none;
   pointer-events: none;
+  max-width: var(--max-width-large);
 
   row-gap: 2rem;
   column-gap: var(--box-gap);
   margin-bottom: var(--box-mb);
-  max-width: var(--max-width-large);
-
   animation: 2.4s slidein ease-in-out;
 }
 
