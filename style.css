@@ -363,7 +363,17 @@ footer a {
   text-decoration: underline;
 }
 
+@media (max-width: 1200px) {
+  .productions {
+    width: 64rem;
+  }
+}
+
 @media only screen and (max-width: 800px) {
+  .productions {
+    width: 40rem;
+  }
+
   :root {
     --box-mb: 8rem;
     --box-gap: 2rem;
